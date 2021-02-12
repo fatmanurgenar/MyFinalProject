@@ -9,7 +9,7 @@ namespace Entities.Concrete
     //almıyorsa anla ki ilerde problem yaşayacaksın!!
     //bu varlıklarımızı işaretleme(gruplama) eğilimine gideriz 
     //gruplama--derizki concrete klasöründeki sınıflar bir veritabanı tablosuna karşılık geliyor.
-    public class Category:IEntity
+    public class Category : IEntity
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
