@@ -1,10 +1,10 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     //T: Türü--> product,category
     // public interface IEntityRepository <T>--> T'yi sınırlandırmak istiyorum.-->
@@ -15,7 +15,7 @@ namespace DataAccess.Abstract
     //IEntity: T sadece IEntity olabilir veya IEntity implemente olan bir nesne olabilİr  
     //new(): new'lenebilir olmalı -->IEntity newlenemeyeceği için bundan da kurtulmuş olduk.
     public interface IEntityRepository <T> where T:class,IEntity,new()
-    {
+    { 
         List<T> GetAll(Expression<Func<T,bool>> filter=null);
         T Get(Expression<Func<T, bool>> filter);
         void Add(T entity);
